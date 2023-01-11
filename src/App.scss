@@ -1,26 +1,17 @@
 .App-container {
-  background-color: #282c34;
-  display: block;
-  min-height: 100vh;
-}
-
-.App-background {
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  display: flex;
-  
-}
-
-.Image-background {
-  width: 50%;
-  height: 50%;
+  background: #111d5e;
+  color: #333;
+  font: 100% Lato, Arial, Sans Serif;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 .App-content {
   height: 100%;
   width: 100%;
-  position: absolute;
+  background-color: transparent;
 }
 
 .App {
@@ -50,6 +41,8 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  z-index: 2;
+  position: relative;
 }
 
 .App-title {
@@ -64,6 +57,7 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background-color: transparent;
 }
 
 .App-link {
