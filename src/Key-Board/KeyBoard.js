@@ -54,7 +54,7 @@ function KeyBoard() {
         {label: 'Ctrl', code: 'ControlLeft', hitCount: 0, expectedCount: 3, size: 2},
         {label: 'Win', code: 'MetaLeft', hitCount: 0, expectedCount: 3, size: 2},
         {label: 'Alt', code: 'AltLeft', hitCount: 0, expectedCount: 3, size: 2},
-        {label: 'Space', code: 'Space', hitCount: '0', expectedCount: 3, size: 18},
+        {label: 'Space', code: 'Space', hitCount: 0, expectedCount: 3, size: 18},
         {label: 'Alt', code: 'AltRight', hitCount: 0, expectedCount: 3, size: 2},
         {label: 'fn', code: 'Space', hitCount: 0, expectedCount: 3, size: 2},
         {label: 'Menu', code: 'ContextMenu', hitCount: 0, expectedCount: 3, size: 2},
@@ -81,7 +81,7 @@ function KeyBoard() {
         console.log(event.code);
         keyboard.forEach((line) => {
             line.forEach((key) => {
-                if (key.code.toUpperCase() === event.code.toUpperCase()) {
+                if (key.code.toUpperCase() === event.code.toUpperCase() && key.hitCount === 0) {
                     key.hitCount++;
                 }
             })

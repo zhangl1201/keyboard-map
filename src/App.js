@@ -3,6 +3,7 @@ import './App.scss';
 import KeyBoard from './Key-Board/KeyBoard';
 import BubbleBackground from './BubbleBackground/BubbleBackground';
 import background from './Assets/heineken.jpg';
+import cocacola from './Assets/cocacola.jpg';
 
 function App() {
   return (
@@ -11,7 +12,7 @@ function App() {
       <div className='App-content'>
         <div className="App">
           <header className="App-header">
-            <span className="App-title">React Test</span>
+            <span className="App-title">Smarter Clean !!!</span>
           </header>
           <div className='App-body'>
             <KeyBoard/>
