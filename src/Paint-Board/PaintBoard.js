@@ -38,6 +38,7 @@ function PaintBoard() {
     const [paintColors] = useState(['#000000', '#999999', '#CC66FF', '#FF0000', '#FF9900', '#FFFF00']);
     const [paintWidths] = useState([1, 2, 3, 4, 5, 6, 8, 10, 14, 18, 22, 30, 40, 50]);  
     const [hidePanel, setHidePanel] = useState(false);
+    const [color, setColor] = useState('#000000');
 
     useEffect(() => {
         function initPainter(){
@@ -46,7 +47,7 @@ function PaintBoard() {
             let x = 0;
             let y = 0;
             canvasContext.lineWidth = 100;
-            canvasContext.strokeStyle = '#000000';
+            canvasContext.strokeStyle = color;
         
             //鼠标按下事件
             canvas.addEventListener('mousedown', (e) => {
@@ -95,6 +96,7 @@ function PaintBoard() {
     }, [])
 
     function onColorClick(index) {
+        setColor(paintColors[index])
         canvasRef.current.getContext('2d').strokeStyle = paintColors[index]
     }
 
