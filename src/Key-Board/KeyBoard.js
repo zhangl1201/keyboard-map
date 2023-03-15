@@ -101,8 +101,8 @@ function KeyBoard() {
 
     return (
         <div className="key-board">
-            {keyboard.map((line) => 
-                <div className='key-line'>{line.map((key) =><Key label={key.label} hitCount={key.hitCount} size={key.size}></Key>)}
+            {keyboard.map((line, index) => 
+                <div key={`line-${index}`} className='key-line'>{line.map((key, index) =><Key key={`key-${index}`} label={key.label} hitCount={key.hitCount} size={key.size}></Key>)}
                 
                 </div>
             )}

@@ -3,20 +3,24 @@
   color: rgb(43, 5, 18);
   font: 100% Lato, Arial, Sans Serif;
   height: 100vh;
+  width: 100vw;
+  position: relative;
   margin: 0;
   padding: 0;
   overflow-x: hidden;
 }
 
 .App-content {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   background-color: transparent;
+  position: absolute;
 }
 
 .App {
   text-align: center;
-  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   caret: none;
   caret-color: transparent;
   background: transparent;
@@ -49,8 +53,7 @@
   font-size: calc(20px + 6vmin);
 }
 
-.App-body {
-  height: 100%;
+.Key-Board-Container {
   display: flex;
   flex-direction: column;
   align-items: center;
